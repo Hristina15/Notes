@@ -22,7 +22,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:src="@drawable/ic_plus_icon"/>
+        android:src="@drawable/ic_plus_icon"
+        android:contentDescription="TODO" />
 
 
 </RelativeLayout>

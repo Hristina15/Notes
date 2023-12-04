@@ -1,11 +1,9 @@
 package com.example.notes.DataBase;
 
-import static android.graphics.Region.Op.REPLACE;
-
-
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
+import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 
 import com.example.notes.Models.Notes;
@@ -14,7 +12,7 @@ import java.util.List;
 
 @Dao
 public interface mainDAO {
-    @Insert (onConflict = REPLACE)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insert (Notes notes);
 
     @Query("SELECT * FROM notes ORDER BY id DESC")
